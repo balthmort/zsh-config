@@ -3,6 +3,9 @@
 # General interactive shell configuration
 #
 
+#Use cache
+export USE_CCACHE=1
+
 # zsh configuration path
 hash -d zsh=$HOME/system/dotfiles/zsh
 
