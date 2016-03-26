@@ -51,9 +51,6 @@ function man
   man "$@"
 }
 
-#Pip packages update
-alias update-pip="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
-
 # Suffix aliases
 alias -s php='php -f'
 alias -s pdf='zathura --fork'
