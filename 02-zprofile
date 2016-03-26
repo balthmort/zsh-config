@@ -12,10 +12,6 @@ export GIT_EDITOR=$EDITOR
 # Language
 [[ -z "$LANG" ]] && export LANG='cs_CZ.UTF-8'
 
-# ===== XDG settings =====
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-
 # ===== Paths =====
 typeset -gU path cdpath fpath mailpath pythonpath # Disable duplicates in paths
 
@@ -51,20 +47,35 @@ pythonpath=(
   /usr/local/lib/python2.?/site-packages(N)
 )
 
+# ===== Shell parameters =====
+export REPORTTIME=5 # Report time if command takes more than 5 seconds
+
+# ===== Compiler/Make =====
+export CC=gcc
+export CFLAGS="-std=c11 -pedantic -Wall -Wextra"
+
+export CXX=g++
+export CXXFLAGS="-std=c++14 -pedantic -Wall -Wextra"
+
+# ===== XDG settings =====
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# ===== email =====
+export MAILDIR="$HOME/system/mail"
+[ -d "$MAILDIR" ] || mkdir -p "$MAILDIR"
+
 # ===== Perl local lib =====
 eval "$(perl -Mlocal::lib=$HOME/.local/perl5)"
 
 # ===== Python virtualenv =====
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-export WORKON_HOME="${XDG_CONFIG_HOME}/python/virtualenv"
-[ -d "${WORKON_HOME}" ] || mkdir -p "${WORKON_HOME}"
+export PYVENV_WORKON_HOME="${XDG_CONFIG_HOME}/python/venv"
+[ -d "${PYVENV_WORKON_HOME}" ] || mkdir -p "${PYVENV_WORKON_HOME}"
 
-PROJECT_HOME="$HOME/projects/python"
-[ -d "${PROJECT_HOME}" ] && export PROJECT_HOME
-
-VIRTUALENVWRAPPER_SCRIPT="$(which virtualenvwrapper.sh)"
-[ -x "${VIRTUALENVWRAPPER_SCRIPT}" ] && source "${VIRTUALENVWRAPPER_SCRIPT}"
+PYVENV_PROJECT_HOME="$HOME/projects/python"
+[ -d "${PYVENV_PROJECT_HOME}" ] && export PYVENV_PROJECT_HOME
 
 # ===== Other env variables =====
 export NO_AT_BRIDGE=1

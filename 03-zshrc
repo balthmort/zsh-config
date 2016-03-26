@@ -27,11 +27,15 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/colored-man-pages
 
   zgen load thegcat/chpwd_profiles
+  zgen load khardix/pyvenv-wrapper
 
   # extra completions
   zgen load khardix/fedpkg-zsh
   zgen load zsh-users/zsh-completions src
   zgen load srijanshetty/zsh-pandoc-completion
+
+  # syntax highlighting -- should be last
+  zgen load zsh-users/zsh-syntax-highlighting
 
   # save init script
   zgen save
