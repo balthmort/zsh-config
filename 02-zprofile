@@ -74,7 +74,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export WORKON_HOME="${XDG_CONFIG_HOME}/python/venv"
 [ -d "${WORKON_HOME}" ] || mkdir -p "${WORKON_HOME}"
 
-PROJECT_HOME="$HOME/projects/python"
+PROJECT_HOME="$HOME/Work/python"
 [ -d "${PROJECT_HOME}" ] && export PROJECT_HOME
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
