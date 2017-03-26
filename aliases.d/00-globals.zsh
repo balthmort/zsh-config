@@ -3,7 +3,7 @@
 alias lll='ls -l --color=always | less -R' # long colored dirs
 alias vide='vim +NERDTree +TagbarOpen'
 alias gide='gvim +NERDTree +TagbarOpen'
-alias zathura='zathura --fork --debug=error'
+#alias zathura='zathura --fork --debug=error'
 alias mpv-us='mpv --video-unscaled'
 alias alot="LC_ALL=en_US.utf8 alot -p $MAILDIR"
 alias view="vim -R"
