@@ -7,7 +7,7 @@
 export USE_CCACHE=1
 
 # zsh configuration path
-hash -d zsh=$HOME/system/dotfiles/zsh
+hash -d zsh=$HOME/System/dotfiles/zsh
 
 #load zgen
 export ZGEN_DIR=~zsh/plugins
