@@ -104,6 +104,9 @@ bindkey "[A" up-line-or-search
 bindkey "OB" down-line-or-search
 bindkey "[B" down-line-or-search
 
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+
 #Power options
 setopt NO_BEEP #no beeping, ever
 setopt AUTO_CD #auto cd if forgot cd
