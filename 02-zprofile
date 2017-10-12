@@ -9,6 +9,8 @@
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 
+export JAVA_HOME="/usr/java/latest"
+
 # Language
 [[ -z "$LANG" ]] && export LANG='cs_CZ.UTF-8'
 

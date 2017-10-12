@@ -25,7 +25,7 @@ function ggr # goto git root
 
 function update-configs
 {
-  local cnf_root=$HOME/system/dotfiles
+  local cnf_root=$HOME/System/dotfiles
   local submodules='on-demand'
 
   while getopts 'f' opt; do
